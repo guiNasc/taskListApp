@@ -1,0 +1,32 @@
+<div ng-controller="tarefasController">
+	<div class="row">
+		
+			<div ng-repeat="currentTarefa in tarefas">
+				<div class="col-md-3">
+					<div class="card card-block">
+						<p class="labelColor">Título:</p>
+					  <h3 class="card-title ellipsis customAlign" editable-text="currentTarefa.titulo">{{currentTarefa.titulo}}</h3>
+					  <p class="labelColor">Descrição:</p>
+					  <p class="card-title ellipsis customAlign" editable-text="currentTarefa.descricao">{{currentTarefa.descricao}}</p>
+
+					  <p><label class="card-text">Concluído </label> <input class="customSet" type="checkbox" ng-model="currentTarefa.concluido"/></p>
+					  <p><label class="marginRight">Editado em: </label>{{currentTarefa.dtEdicao | date : "dd/MM/yyyy hh:mm"}}</p>
+					  <button class="btn btn-outline-success btn-block" ng-click="atualizarTarefa(currentTarefa)">Atualizar</button>
+					  <button class="btn btn-outline-danger btn-block" ng-click="apagarTarefa(currentTarefa)">Excluir</button>
+					</div>
+				</div>
+			</div>
+		
+		<div style="width: 18%; margin-left: 40px;">
+			<form name="tarefaForm">
+				<div class="newTask">
+				<input type="text" class="form-control" ng-model="tarefa.titulo" placeholder="Título" ng-required="true"/>
+				<input type="text" class="form-control" ng-model="tarefa.descricao" placeholder="Descrição" ng-required="true"/>
+				<button class="btn btn-outline-success btn-block" ng-click="adicionarTarefa(tarefa)" 
+				ng-disabled="tarefaForm.$invalid">+ Nova</button>
+				</div>
+			</form>	
+		</div>
+					  
+	</div>
+</div>

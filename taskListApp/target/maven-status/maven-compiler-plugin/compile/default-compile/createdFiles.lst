@@ -1,0 +1,4 @@
+com/taskList/dao/TaskDao.class
+com/taskList/service/TaskService.class
+com/taskList/model/Task.class
+taskListApp/Boot.class

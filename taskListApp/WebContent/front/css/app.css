@@ -1,0 +1,42 @@
+.card{
+	
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	min-height: 250px;
+}
+
+.newTask{
+
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	min-height: 250px;	
+}
+
+.setFloat{
+	float: left
+}
+.ellipsis {
+  	text-overflow: ellipsis;
+  	/* Required for text-overflow to do anything */
+  	white-space: nowrap;
+  	overflow: hidden;
+}
+.form-control{
+	margin-bottom: 10px;
+}
+.customSet{
+	margin-right: 6px;
+}
+
+.customAlign{
+	margin-left:10px;
+}
+
+.labelColor{
+	color: #aaa;
+}
+.marginRight{
+	margin-right: 10px;
+}
